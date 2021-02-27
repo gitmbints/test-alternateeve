@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste Employés</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="alt-desktop">
+    <nav class="alt-desktop__sidenav">
+      <img src="./images/logo.png" alt="logo" class="alt-brand">
+      <div class="alt-desktoop__sidenav__section">
+        <span class="alt-desktop__sidenav__title">Employés</span>
+        <ul class="alt-desktop__menu">
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-dashboard.png" alt="icon dashboard">
+              Tableau de bord
+            </a>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-my-schedule.png" alt="icon calendrier">
+              Mon horaire
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-clock.png" alt="icon horloge">
+              Suivi des heures
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-news.png" alt="icon journal">
+              Nouvelles
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-trend.png" alt="icon charte graphique">
+              Avancement
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-hat.png" alt="icon chapeau">
+              Formation & mentorat
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-contact.png" alt="icon chapeau">
+              Ma fiche employé 
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="alt-desktoop__sidenav__section">
+        <span class="alt-desktop__sidenav__title">Entreprise</span>
+        <ul class="alt-desktop__menu">
+          <li class="alt-desktop__menu__item alt-desktop__menu__item--active">
+            <a href="#">
+              <img src="./images/icon-group.png" alt="icon dashboard">
+              Employés
+            </a>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-my-schedule.png" alt="icon calendrier">
+              Planification Des horaires
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-clock.png" alt="icon horloge">
+              Heures travaillées
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-news.png" alt="icon journal">
+              Nouvelles
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-trend.png" alt="icon charte graphique">
+              Avancement
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-hat.png" alt="icon chapeau">
+              Formation & mentorat
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-hiring.png" alt="icon chapeau">
+              Recrutement
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icon-setting.png" alt="icon chapeau">
+              Paramètre
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item alt-desktop__menu__item--logout">
+            <a href="#">
+              <img src="./images/icon-logout.png" alt="icon logout">
+              Log out
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="alt-desktop__main">
+      <div class="alt-desktop__header">
+        <h1>Liste employés</h1>
+        <ul class="alt-desktop__header__ctas">
+          <li>
+            <a href="#" class="alt-desktop__header__btn">Démarrer la pointeuse</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/icon_notification.png" alt="icon notification">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="alt-desktop__header__avatar">
+              <img src="./images/avatar-admin.png" alt="">
+              B.user-Name
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="alt-desktop__body">
+        <div class="alt-desktop__filter">
+            <form action="">
+              <div class="alt-desktop__form-group">
+                <input type="text" id="id-search" name="filter" class="alt-desktop__form-control" placeholder="Rechercher">
+                <span>
+                  <img src="./images/icon-search.png" alt="">
+                </span>
+              </div>
+              <div class="alt-desktop__form-group">
+                <select name="filter" id="id-place" class="alt-desktop__form-control alt-desktop__select">
+                  <option value="1">Emplacement</option>
+                  <option value="1">Emplacement 1</option>
+                  <option value="1">Emplacement 2</option>
+                </select>
+              </div>
+              <div class="alt-desktop__form-group">
+                <select name="filter" id="id-group" class="alt-desktop__form-control alt-desktop__select">
+                  <option value="3">Groupes</option>
+                  <option value="4">Groupes 1</option>
+                  <option value="5">Groupes 2</option>
+                </select>
+              </div>
+              <div class="alt-desktop__form-group">
+                <button type="submit" class="alt-desktop__btn">Appliquer</button>
+              </div>
+            </form>
+            <div class="alt-desktop__flex">
+              <span>Ajouter</span>
+              <a href="#" class="alt-desktop__btn alt-desktop__btn--circle">
+                <img src="./images/in.png" alt="">
+              </a>
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
