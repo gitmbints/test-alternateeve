@@ -438,6 +438,12 @@ body {
   line-height: 19px;
   padding: 12px 28px;
   text-align: center;
+  -webkit-transition: background .3s ease-in;
+  transition: background .3s ease-in;
+}
+
+.alt-desktop__btn:hover {
+  background: #7ae6d2;
 }
 
 .alt-desktop__btn--circle {

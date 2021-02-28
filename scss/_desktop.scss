@@ -217,6 +217,11 @@
     line-height: 19px;
     padding: 12px 28px;
     text-align: center;
+    transition: background .3s ease-in;
+  }
+
+  &__btn:hover {
+    background: #7ae6d2;
   }
 
   &__btn--circle {
