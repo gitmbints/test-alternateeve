@@ -351,6 +351,7 @@ body {
           align-items: center;
   background: #F9FAFC;
   padding: 25px 20px;
+  margin-bottom: 30px;
 }
 
 .alt-desktop__filter form {
@@ -395,13 +396,43 @@ body {
   width: 100%;
 }
 
-.alt-desktop__btn {
+.alt-desktop__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.alt-desktop__select--arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
   display: block;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FCB698;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.alt-desktop__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #73C7B7;
   border: transparent;
   border-radius: 2px;
   color: #fff;
   cursor: pointer;
+  font-family: inherit;
   font-weight: 600;
   font-size: 13px;
   line-height: 19px;
@@ -441,5 +472,73 @@ body {
   font-weight: bold;
   font-size: 15px;
   line-height: 22px;
+}
+
+.alt-desktop__table {
+  width: 100%;
+}
+
+.alt-desktop__table th {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  padding-bottom: 25px;
+}
+
+.alt-desktop__table td {
+  color: #5A5A5A;
+  font-weight: 5;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  padding: 16px 0;
+  text-transform: capitalize;
+}
+
+.alt-desktop__table th, .alt-desktop__table td {
+  border-bottom: 1px solid #ECEDEF;
+  text-align: left;
+}
+
+.alt-desktop__table__td--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alt-desktop__table__user-img {
+  margin-right: 20px;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.alt-desktop .alt-badge {
+  display: inline-block;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-right: 7px;
+}
+
+.alt-desktop .alt-badge--actif {
+  background: #49D4AB;
+}
+
+.alt-desktop .alt-badge--inactif-temp {
+  background: #F5D04B;
+}
+
+.alt-desktop .alt-badge--inactif-def {
+  background: #F36242;
 }
 /*# sourceMappingURL=styles.css.map */

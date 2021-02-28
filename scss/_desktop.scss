@@ -147,6 +147,7 @@
     align-items: center;
     background: $grey-color;
     padding: 25px 20px;
+    margin-bottom: 30px;
 
     form {
       display: flex;
@@ -183,13 +184,34 @@
     width: 100%;
   }
 
+  &__select {
+    appearance: none;
+
+    &--arrow {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      display: block;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #FCB698;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+      transform: translateY(-50%);
+    }
+  }
+
   &__btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: $green-color;
     border: transparent;
     border-radius: 2px;
     color: #fff;
     cursor: pointer;
+    font-family: inherit;
     font-weight: 600;
     font-size: 13px;
     line-height: 19px;
@@ -217,6 +239,69 @@
       font-weight: bold;
       font-size: 15px;
       line-height: 22px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+
+    th {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      text-transform: capitalize;
+      padding-bottom: 25px;
+    }
+
+    td {
+      color: #5A5A5A;
+      font-weight: 5;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      padding: 16px 0;
+      text-transform: capitalize
+    }
+
+    th, td {
+      border-bottom: 1px solid #ECEDEF;
+      text-align: left;
+    }
+
+    &__td--flex {
+      display: flex;
+      align-items: center;
+    }
+    
+    &__user-img {
+      margin-right: 20px;
+      vertical-align: middle;
+      width: 42px;
+      height: 42px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .alt-badge {
+    display: inline-block;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin-right: 7px;
+
+    &--actif {
+      background: #49D4AB;
+    }
+
+    &--inactif-temp {
+      background: #F5D04B;
+    }
+
+    &--inactif-def {
+      background: #F36242;
     }
   }
 
