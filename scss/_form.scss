@@ -1,0 +1,32 @@
+.alt-form-group {
+  position: relative;
+  width: 100%;
+
+  &-icon {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+  }
+}
+
+.alt-form-group:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.alt-form-control {
+  appearance: none;
+  background: #fff;
+  border: none;
+  color: #8D999F;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  padding: 13px 35px 13px 22px;
+  width: 100%;
+
+  &--rounded {
+    border-radius: 57px;
+  }
+}

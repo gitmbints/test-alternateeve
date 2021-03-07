@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste Employés</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <!-- Mobile Layout -->
+  <div class="alt-mobile">
+    <nav class="alt-mobile-sidenav">
+      <div class="alt-mobile-user-info">
+        <img src="./images/avatar-admin.png" alt="">
+        <span>B.User-Name</span>
+      </div>
+      <div class="alt-mobile-dropdown">
+        <div class="alt-mobile-dropdown-top">
+          <span>Employés</span>
+          <span class="alt-mobile-dropdown-arrow"></span>
+        </div>
+        <div class="alt-mobile-dropdown-links">
+          <ul>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-dashboard.png" alt="">
+                Tableau de bord
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-my-schedule.png" alt="">
+                Mon Horaire
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-clock.png" alt="">
+                Suivi des heures
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-news.png" alt="">
+                nouvelles
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-trend.png" alt="">
+                Avancement
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-hat.png" alt="">
+                Formation & mentorat
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-contact.png" alt="">
+                Ma fiche employé
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="alt-mobile-dropdown">
+        <div class="alt-mobile-dropdown-top">
+          <span>Entreprise</span>
+          <span class="alt-mobile-dropdown-arrow"></span>
+        </div>
+        <div class="alt-mobile-dropdown-links">
+          <ul>
+            <li class="alt-active">
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-group.png" alt="">
+                Employés
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-my-schedule.png" alt="">
+                Planification Des horaires
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-clock.png" alt="">
+                Heures travaillées
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-news.png" alt="">
+                Nouvelles
+                <span class="alt-status alt-status--notif"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-trend.png" alt="">
+                Avancement
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-hat.png" alt="">
+                Formation & mentorat
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-hiring.png" alt="">
+                Recrutement
+              </a>
+            </li>
+            <li>
+              <a href="#" class="alt-mobile-dropdown-link">
+                <img src="./images/icons/icon-setting.png" alt="">
+                Paramètres
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="alt-mobile-logout">
+        <a href="#" class="alt-mobile-dropdown-link">
+          <img src="./images/icons/icon-logout.png" alt="">
+          Log out
+        </a>
+      </div>
+    </nav>
+    <section class="alt-mobile-main">
+      <div class="alt-mobile-header">
+        <img src="./images/logo.png" alt="logo aternateeve" class="alt-mobile-brand">
+        <h1>Dossier employés</h1>
+        <span class="alt-mobile-hamburger"></span>
+      </div>
+      <div class="alt-mobile-ctas">
+        <h2>Ajouter un employé</h2>
+        <a href="#" class="alt-button alt-button--circle">
+          <img src="./images/icons/in.png" alt="">
+        </a>
+      </div>
+      <div class="alt-mobile-filters">
+        <div class="alt-mobile-filters-toggle">
+          Filtrer
+          <span class="alt-mobile-filters-arrow"></span>
+        </div>
+        <div class="alt-mobile-filters-fields">
+          <div class="alt-form-group">
+            <input type="text" class="alt-form-control alt-form-control--rounded" placeholder="Rechercher">
+            <span class="alt-form-group-icon">
+              <img src="./images/icons/icon-search.png" alt="">
+            </span>
+          </div>
+          <div class="alt-form-group">
+            <select name="place" id="id-place" class="alt-form-control alt-form-control--rounded">
+              <option value="default">Emplacements</option>
+              <option value="1">Emplacement #1</option>
+              <option value="2">Emplacement #2</option>
+              <option value="3">Emplacement #3</option>
+            </select>
+            <span class="alt-mobile-filters-arrow"></span>
+          </div>
+          <div class="alt-form-group">
+            <select name="group" id="id-group" class="alt-form-control alt-form-control--rounded">
+              <option value="default">Groupes</option>
+              <option value="4">Groupe #1</option>
+              <option value="5">Groupe #2</option>
+              <option value="6">Groupe #3</option>
+            </select>
+            <span class="alt-mobile-filters-arrow"></span>
+          </div>
+          <div class="alt-form-group">
+            <a href="#" class="alt-button alt-button--rounded">Appliquer</a>
+          </div>
+        </div>
+      </div>
+      <div class="alt-mobile-table">
+        <table class="alt-mobile-employee-list">
+          <tr>
+            <td class="alt-mobile-employee-list-image">
+              <img src="./images/user1.png" alt="" class="alt-user-avatar">
+              <span class="alt-mobile-employee-list-image-status  alt-status alt-status--inactif-temp"></span>
+            </td>
+            <td class="alt-mobile-employee-list-name">
+              <p>David</p>
+              <p>Boitard</p>
+            </td>
+            <td>
+              Nom du poste N.1
+            </td>
+            <td>
+              <a href="#" class="alt-button alt-button--circle">
+                <img src="./images/icons/icon-folder.png" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="alt-mobile-employee-list-image">
+              <img src="./images/user2.png" alt="" class="alt-user-avatar">
+              <span class="alt-mobile-employee-list-image-status  alt-status alt-status--actif"></span>
+            </td>
+            <td class="alt-mobile-employee-list-name">
+              <p>Anne-Sophie</p>
+              <p>Guérard</p>
+            </td>
+            <td>
+              Nom du poste N.2
+            </td>
+            <td>
+              <a href="#" class="alt-button alt-button--circle">
+                <img src="./images/icons/icon-folder.png" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="alt-mobile-employee-list-image">
+              <img src="./images/avatar-admin.png" alt="" class="alt-user-avatar">
+              <span class="alt-mobile-employee-list-image-status  alt-status alt-status--actif"></span>
+            </td>
+            <td class="alt-mobile-employee-list-name">
+              <p>Serena</p>
+              <p>Capozzi</p>
+            </td>
+            <td>
+              Nom du poste N.3
+            </td>
+            <td>
+              <a href="#" class="alt-button alt-button--circle">
+                <img src="./images/icons/icon-folder.png" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="alt-mobile-employee-list-image">
+              <img src="./images/user5.png" alt="" class="alt-user-avatar">
+              <span class="alt-mobile-employee-list-image-status  alt-status alt-status--inactif-temp"></span>
+            </td>
+            <td class="alt-mobile-employee-list-name">
+              <p>Jean-Sébastien</p>
+              <p>Vadeboncoeur-Trudel</p>
+            </td>
+            <td>
+              Nom du poste N.4
+            </td>
+            <td>
+              <a href="#" class="alt-button alt-button--circle">
+                <img src="./images/icons/icon-folder.png" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="alt-mobile-employee-list-image">
+              <img src="./images/user4.png" alt="" class="alt-user-avatar">
+              <span class="alt-mobile-employee-list-image-status  alt-status alt-status--actif"></span>
+            </td>
+            <td class="alt-mobile-employee-list-name">
+              <p>Njatomanana Fenosoa</p>
+              <p>RANDRIANASOLO</p>
+            </td>
+            <td>
+              Nom du poste N.5
+            </td>
+            <td>
+              <a href="#" class="alt-button alt-button--circle">
+                <img src="./images/icons/icon-folder.png" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="alt-mobile-employee-list-image">
+              <img src="./images/user3.png" alt="" class="alt-user-avatar">
+              <span class="alt-mobile-employee-list-image-status  alt-status alt-status--inactif-def"></span>
+            </td>
+            <td class="alt-mobile-employee-list-name">
+              <p>Prénom</p>
+              <p>Nom</p>
+            </td>
+            <td>
+              Nom du poste N.6
+            </td>
+            <td>
+              <a href="#" class="alt-button alt-button--circle">
+                <img src="./images/icons/icon-folder.png" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="alt-mobile-employee-list-image">
+              <img src="./images/user4.png" alt="" class="alt-user-avatar">
+              <span class="alt-mobile-employee-list-image-status  alt-status alt-status--actif"></span>
+            </td>
+            <td class="alt-mobile-employee-list-name">
+              <p>David</p>
+              <p>Boitard</p>
+            </td>
+            <td>
+              Nom du poste N.7
+            </td>
+            <td>
+              <a href="#" class="alt-button alt-button--circle">
+                <img src="./images/icons/icon-folder.png" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="alt-mobile-employee-list-image">
+              <img src="./images/user3.png" alt="" class="alt-user-avatar">
+              <span class="alt-mobile-employee-list-image-status  alt-status alt-status--inactif-def"></span>
+            </td>
+            <td class="alt-mobile-employee-list-name">
+              <p>Anne-Sophie</p>
+              <p>Guérard</p>
+            </td>
+            <td>
+              Nom du poste N.8
+            </td>
+            <td>
+              <a href="#" class="alt-button alt-button--circle">
+                <img src="./images/icons/icon-folder.png" alt="">
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="alt-mobile-float-button-container">
+        <a href="#" class="alt-mobile-float-button">
+          <img src="./images/three-points.png" alt="">
+        </a>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- Desktop Layout -->
+  <div class="alt-desktop">
+    <nav class="alt-desktop__sidenav">
+      <img src="./images/logo.png" alt="logo" class="alt-brand">
+      <div class="alt-desktoop__sidenav__section">
+        <span class="alt-desktop__sidenav__title">Employés</span>
+        <ul class="alt-desktop__menu">
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-dashboard.png" alt="icon dashboard">
+              Tableau de bord
+            </a>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-my-schedule.png" alt="icon calendrier">
+              Mon horaire
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-clock.png" alt="icon horloge">
+              Suivi des heures
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-news.png" alt="icon journal">
+              Nouvelles
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-trend.png" alt="icon charte graphique">
+              Avancement
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-hat.png" alt="icon chapeau">
+              Formation & mentorat
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-contact.png" alt="icon chapeau">
+              Ma fiche employé 
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="alt-desktoop__sidenav__section">
+        <span class="alt-desktop__sidenav__title">Entreprise</span>
+        <ul class="alt-desktop__menu">
+          <li class="alt-desktop__menu__item alt-desktop__menu__item--active">
+            <a href="#">
+              <img src="./images/icons/icon-group.png" alt="icon dashboard">
+              Employés
+            </a>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-my-schedule.png" alt="icon calendrier">
+              Planification Des horaires
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-clock.png" alt="icon horloge">
+              Heures travaillées
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-news.png" alt="icon journal">
+              Nouvelles
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-trend.png" alt="icon charte graphique">
+              Avancement
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-hat.png" alt="icon chapeau">
+              Formation & mentorat
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-hiring.png" alt="icon chapeau">
+              Recrutement
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item">
+            <a href="#">
+              <img src="./images/icons/icon-setting.png" alt="icon chapeau">
+              Paramètre
+            </a>
+          </li>
+          <li class="alt-desktop__menu__item alt-desktop__menu__item--logout">
+            <a href="#">
+              <img src="./images/icons/icon-logout.png" alt="icon logout">
+              Log out
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="alt-desktop__main">
+      <div class="alt-desktop__header">
+        <h1>Liste employés</h1>
+        <ul class="alt-desktop__header__ctas">
+          <li>
+            <a href="#" class="alt-desktop__header__btn">Démarrer la pointeuse</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/icons/icon_notification.png" alt="icon notification">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="alt-desktop__header__avatar">
+              <img src="./images/avatar-admin.png" alt="">
+              B.user-Name
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="alt-desktop__body">
+        <div class="alt-desktop__filter">
+            <form action="">
+              <div class="alt-desktop__form-group">
+                <input type="text" id="id-search" name="filter" class="alt-desktop__form-control" placeholder="Rechercher">
+                <span>
+                  <img src="./images/icons/icon-search.png" alt="">
+                </span>
+              </div>
+              <div class="alt-desktop__form-group">
+                <select name="filter" id="id-place" class="alt-desktop__form-control alt-desktop__select">
+                  <option value="1">Emplacement</option>
+                  <option value="1">Emplacement 1</option>
+                  <option value="1">Emplacement 2</option>
+                </select>
+                <span class="alt-desktop__select--arrow"></span>
+              </div>
+              <div class="alt-desktop__form-group">
+                <select name="filter" id="id-group" class="alt-desktop__form-control alt-desktop__select">
+                  <option value="3">Groupes</option>
+                  <option value="4">Groupes 1</option>
+                  <option value="5">Groupes 2</option>
+                </select>
+                <span class="alt-desktop__select--arrow"></span>
+              </div>
+              <div class="alt-desktop__form-group">
+                <button type="submit" class="alt-desktop__btn">Appliquer</button>
+              </div>
+            </form>
+            <div class="alt-desktop__flex">
+              <span>Ajouter</span>
+              <a href="#" class="alt-desktop__btn alt-desktop__btn--circle">
+                <img src="./images/icons/in.png" alt="">
+              </a>
+            </div>
+        </div>
+        <table class="alt-desktop__table">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Poste</th>
+              <th>Statut</th>
+              <th>Groupe</th>
+              <th>Date d'embauche</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="./images/user1.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--actif"></span>
+                Actif
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/user2.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--inactif-temp"></span>
+                Inactif Temporairement
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/avatar-admin.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--actif"></span>
+                Actif
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/user3.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--inactif-def"></span>
+                Inactif Définitivement
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/user4.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--actif"></span>
+                Actif
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/user3.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--inactif-temp"></span>
+                Inactif Temporairement
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/user5.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--actif"></span>
+                Actif
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/avatar-admin.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--actif"></span>
+                actif
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/user4.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--actif"></span>
+                Actif
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/user1.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--actif"></span>
+                Actif
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/user2.png" alt="" class="alt-desktop__table__user-img">
+                Lorem Ipsum
+              </td>
+              <td>
+                Lorem Ipsum
+              </td>
+              <td>
+                <span class="alt-badge alt-badge--actif"></span>
+                Actif
+              </td>
+              <td>
+                Nom du groupe
+              </td>
+              <td>
+                25/03/2018
+              </td>
+              <td>
+               <button class="alt-desktop__btn">
+                 <img src="./images/icons/icon-folder.png" alt="">
+               </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <!-- Javascript -->
+  <script src="./js/app.js"></script>
+</body>
+</html>

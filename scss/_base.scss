@@ -1,4 +1,36 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: $grey-color;
+}
+
+.alt-user-avatar {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.alt-status {
+  display: inline-block;
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+
+  &--inactif-temp {
+    background: #F5D954;
+  }
+
+  &--inactif-def {
+    background: #FD7D54;
+  }
+
+  &--actif {
+    background: #92E890;
+  }
+
+  &--notif {
+    background: #FCB698;
+    margin-left: auto;
+    width: 7px;
+    height: 7px;
+  }
 }
